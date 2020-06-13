@@ -72,3 +72,12 @@ console.log(person.name, person.age, person.country);
 // Puedo desestructurar el objeto de esta forma
 let { name, age, country } = person;
 console.log(name, age, country);
+
+// *********** Operador de propagacion *******
+// en ES6 se implementa el nuevo operador "..."
+
+let team1 = ['Walter', 'Vane', 'Erick'];
+let team2 = ['Cuervo', 'Claudia', 'Betito'];
+let families = ['Zamarron', ...team1, ...team2];
+
+console.log(families);
