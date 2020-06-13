@@ -81,3 +81,44 @@ let team2 = ['Cuervo', 'Claudia', 'Betito'];
 let families = ['Zamarron', ...team1, ...team2];
 
 console.log(families);
+
+// ****** Let *******
+/*
+let y const
+Anteriormente se declaraban las variables con var
+var tiene un contexto global
+(se podia aceder a ella desde cualquier parte del codigo,
+ sin importar en donde se halla declarado)
+
+let a diferencia de var tiene un scope local, por lo cual si
+se declara dentro de un bloque esta no se puede acceder de forma global
+
+const declara una variable que no se podra modificar 
+*/
+
+{
+    var globalVar = "Global Var"
+}
+
+{
+    let globalLet = "Global Let"
+    console.log(globalLet); // correcto porque esta dentro del mismo Scope
+}
+
+console.log(globalVar);
+console.log(globalLet); // Error undefined
+
+
+
+// const declara una variable que no se podra modificar 
+
+const a = 'b';
+
+console.log(a);
+
+a = 'Cambia' // TypeError: Assignment to constant variable.
+
+console.log(a);
+
+
+
