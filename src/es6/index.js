@@ -41,3 +41,34 @@ console.log(epicPhrase);
 // Usamos los template literals
 let epicPhrase2 = `${hello} ${world}`;
 console.log(epicPhrase2);
+
+
+// ******** Strings Multilinea ********
+
+// Antes de ES6
+let lorem = "Mañana voy a desayunar unos \n"
++ "RiCoS HoTcAkEs!!!"
+
+console.log(lorem);
+
+// Despues de ES6
+let lorem2 = `Mañana vas a desayunar hotcakes??
+ahhh PRRO!!`;
+
+console.log(lorem2);
+
+// ******* Desestructuracion **********
+
+let person = {
+    'name': 'Walter',
+    'age': 32,
+    'country': 'MX'
+}
+
+//Antes de ES6
+console.log(person.name, person.age, person.country);
+
+// Despues de ES6
+// Puedo desestructurar el objeto de esta forma
+let { name, age, country } = person;
+console.log(name, age, country);
