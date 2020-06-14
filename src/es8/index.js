@@ -37,3 +37,14 @@ const values = Object.values(data2);
 // este seria el resultado
 console.log(values);
 // [ 'Walter', 'Vanessa', 'Erick' ]
+
+
+// *********** Padding *********** //
+//con padStart se añade valores al principio de un string
+const string = 'hello';
+console.log(string.padStart(8,'hi '));
+
+//con padEnd se añade valores al principio de un string
+conststring = 'hello';
+console.log(string.padEnd(12,' -----------'));
+console.log('food'.padEnd(12,' -----------'));
