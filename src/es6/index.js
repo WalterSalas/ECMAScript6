@@ -172,8 +172,25 @@ let listOfNames3 = (name, age, country) => {
 const listOfNames4 = name => {
     // y el bloque de codigo que necesitamos
 }
-
+ 
 const square = num => num * num;
 
 // ********** Promises *********** //
+// El objeto Promise (Promesa) es usado para computaciones asíncronas. 
+// Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.
 
+
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if (false){
+            resolve('Hey Hola!! es Resolve!!');
+        } else {
+            reject('No jalo!');
+        }
+    });
+}
+
+helloPromise ()
+    .then(response => console.log(response))
+    .catch(response => console.log(response));
