@@ -201,25 +201,35 @@ helloPromise ()
 // y posteriormente a https://platzi.com/clases/javascript-profesional/
 
 class calculator{
+    // constructor -> es el metodo para inicializar la clase
 
     constructor() {
+        // Creamos las variables con los valores default
         this.valueA = 0;
         this.valueB = 0;
     }
-
+        
     sum(valueA, valueB) {
+        // creamos un metodo y le pasamos los valores creados
         this.valueA = valueA;
         this.valueB = valueB;
+        // por ultimo retornamos la suma de los valores
         return this.valueA + this.valueB;
     }
-
+    
     rest(valueA, valueB) {
+        // creamos un metodo y le pasamos los valores creados
         this.valueA = valueA;
         this.valueB = valueB;
+        // por ultimo retornamos la resta de los valores
         return this.valueA - this.valueB;
     }
 }
 
+// creo una instancia de mi clase
 const calc = new calculator();
+// posteriormente con un console.log imprimimos la funcion.metodo(valor1, valor2)
 console.log(calc.sum(2, 2));
+// lo mismo para la resta
 console.log(calc.rest(4, 1));
+
