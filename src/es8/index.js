@@ -53,3 +53,43 @@ console.log('food'.padEnd(12,' -----------'));
 const obj = {
     Developer: Walter, //Puedo agregar coma al final de un valor de un objeto
 };
+
+
+/* Async / Away */
+
+// implemento una funcion que contenga una promise en este caso solo estoy
+// validando que dentro de la promesa se haga un if que siempre sea true
+// resolvera y esperara 3 seg para enviar Hello World
+const helloWorld = () => {
+    return new Promise((resolve, reject) => {
+        if (true) {
+            setTimeout (() => resolve('Hello World!!'), 3000)
+        } else {
+            reject(new Error('Error'))
+        };
+    })
+};
+
+// despues de generar mi promesa la llamo con una constante Async
+// y uso la funcion de await para que espere e imprima el valor true de 
+// mi promise
+const helloAsync = async () => {
+    const hello = await helloWorld();
+    console.log(hello);
+}
+
+// al final solo llamo mi helloAsync para ejecutar mi funcion asyncrona
+helloAsync();
+
+
+// ptra forma de usarlas es con try catch
+const anotherFunction = async () => {
+    try {
+        const hello = await helloWorld();
+        console.log(hello);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+anotherFunction();
