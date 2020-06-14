@@ -10,4 +10,11 @@ if (numbers.includes(8)){
     console.log('No esta este rollo!')
 };
 
-// ********* ************//
+// ********* elevar a potencia ************//
+
+let base = 4;
+let exponent = 3;
+// el operador que se usa para elevar a una potencia es "**"
+let result = base ** exponent;
+
+console.log(result);
