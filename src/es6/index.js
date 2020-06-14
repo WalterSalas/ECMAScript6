@@ -233,3 +233,44 @@ console.log(calc.sum(2, 2));
 // lo mismo para la resta
 console.log(calc.rest(4, 1));
 
+
+// con import podemos traer logica modularizada en otro archivo
+import { hello } from './module';
+// y de esta forma ya estaria disponible la logica modularizada
+hello();
+
+// ******* Generators ******* //
+// en ES6 podemos usar "contenedores de logica"
+// es un bloque de codigo que tiene diferentes pasos que pueden ser llamados en secuencia.
+
+// la funcion Generator se escribe con function* 
+function* helloworld() {
+    // y voy poniendo yields con los pasos que quiero ir ejecutando en secuencia
+    if (true) {
+        yield 'Hello, ';
+    }
+    if (true) {
+        yield 'World!!';
+    }
+    if (true) {
+        yield 'a Huevo!!!';
+    }
+    if (true) {
+        yield 'este pedo se ejecuta';
+    }
+    if (true) {
+        yield 'cada vez que lo llamo!'
+    }
+};
+
+// posteriormente llamo mi funcion generator y lo guardo en una variable con el nombre que empleare al usarla
+const generatorHello = helloworld();
+
+// y despues puedo usar el valor "next" e ir ejecutando los bloques de codigo que estableci en mi funcion generator
+// con next ire recordando que fue ejecutado y que sigue
+
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
