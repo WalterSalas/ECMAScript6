@@ -48,3 +48,8 @@ console.log(string.padStart(8,'hi '));
 conststring = 'hello';
 console.log(string.padEnd(12,' -----------'));
 console.log('food'.padEnd(12,' -----------'));
+
+// trending coma
+const obj = {
+    Developer: Walter, //Puedo agregar coma al final de un valor de un objeto
+};
