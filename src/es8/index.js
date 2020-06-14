@@ -6,7 +6,7 @@ const data = {
     designer: 'Erick',
 }
 
-// posteriormente usando creamos una variable que guardara la matriz generada con 
+// posteriormente usando una variable que guardara la matriz generada con 
 // Object.entries(mi objeto)
 const entries = Object.entries(data);
 
