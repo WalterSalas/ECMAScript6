@@ -121,4 +121,59 @@ a = 'Cambia' // TypeError: Assignment to constant variable.
 console.log(a);
 
 
+// ********* Propiedad de objetos mejorada  ********* //
+let name = 'Walter';
+let age = '37';
+
+
+// Antes de ES6 asi se creaba un objeto
+obj = { 
+    name: name, 
+    age: age 
+};
+
+
+// Ahora es mucho mas intuitivo en despues de ES6
+// ya que no es necesario hacer la creacion de las propiedades y asignar los valores
+
+obj2 = {
+    name,
+    age
+};
+
+console.log(obj);
+console.log(obj2);
+
+
+// ********** ArrowFunctions *********** //
+// las ArrowFunctions son funciones anonimas //
+// creo un arreglo de 2 objetos con las propiedades de name y age
+const names = [
+    { name: 'Walter', age: 37 },
+    { name: 'Vanessa', age: 36 }
+]
+
+// Antes de ES6 usabamos la propiedad map y le pasabamos una funcion con item y despues el codigo que necesitabamos realizar
+// en este caso "console.log" e "item.name" para imprimir los nombres de los objetos dentro del arreglo
+
+let listOfNames = names.map(function(item) {
+    console.log(item.name);
+})
+
+// Ahora en ES6 usamos la ArrowFunction para sustituir la funcion anonima, y hacer la  funcion mas entendible
+let listOfNames2 = names.map(item => console.log(item.age));
+
+// Otra manera en la que podemos toparnos con las arrowfunction es de la siguiente manera
+let listOfNames3 = (name, age, country) => {
+    // y el bloque de codigo que necesitamos
+}
+
+// Otra manera en la que podemos toparnos con las arrowfunction es de la siguiente manera
+const listOfNames4 = name => {
+    // y el bloque de codigo que necesitamos
+}
+
+const square = num => num * num;
+
+// ********** Promises *********** //
 
