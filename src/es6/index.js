@@ -179,8 +179,6 @@ const square = num => num * num;
 // El objeto Promise (Promesa) es usado para computaciones asíncronas. 
 // Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.
 
-
-
 const helloPromise = () => {
     return new Promise((resolve, reject) => {
         if (false){
@@ -194,3 +192,34 @@ const helloPromise = () => {
 helloPromise ()
     .then(response => console.log(response))
     .catch(response => console.log(response));
+    
+
+
+// ********** Clases ********** //
+
+// para profundizar en POO recurre a https://platzi.com/clases/oop/
+// y posteriormente a https://platzi.com/clases/javascript-profesional/
+
+class calculator{
+
+    constructor() {
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+
+    sum(valueA, valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+
+    rest(valueA, valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA - this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2, 2));
+console.log(calc.rest(4, 1));
