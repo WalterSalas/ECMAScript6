@@ -35,7 +35,7 @@ const helloworld = () =>{
         // primero pongo la condicion aqui
         (true)
         // Pongo el verdadero con ?
-        ? resolve('Hello World')
+        ? setTimeout (() => resolve('Hello World!! con 3 segundos de retraso'), 3000)
         // pongo el else con :
         : reject(new error ('test Error'))
     });
