@@ -27,3 +27,27 @@ const obj1 = {
 
 console.log(obj1);
 
+/* promise.finally */
+// creo mi funcion con mi promesa
+const helloworld = () =>{
+    return new Promise((resolve, reject) => {
+        // usare un If diferente "Ternario"
+        // primero pongo la condicion aqui
+        (true)
+        // Pongo el verdadero con ?
+        ? resolve('Hello World')
+        // pongo el else con :
+        : reject(new error ('test Error'))
+    });
+};
+
+// posteriormente uso mi funcion con mi promesa
+helloworld()
+    // cuando es correcto uso el resultado y lo imprimo en consola
+    .then(respose => console.log(respose))
+    // puedo cachar los errores de esta forma
+    .catch(error => console.log(error))
+    // y lo nuevo que se imprementa en ES9 es el finally que solo se ejecuta 
+    // cuando termina mi promesa
+    .finally(() => console.log('Finalizo'))
+
